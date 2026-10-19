@@ -126,7 +126,7 @@ Other features such as demographics (age/careers of participants) were included 
 | `physical_activity_min` | 0.005 | 9 |
 | `blue_light_filter_active` | 0.001 | 10 |
 
-*Both models agree: **total_sleep_hours** is the most important predictor, followed by **morning_alarm_snoozes** and **sleep_latency_min**.*
+*According to the linear regression model, total sleep hours has the highest importance followed by morning alarm snoozes and sleep latency, but in the random forest model, morning alarm snoozes has the highest importance.*
 
 ### Linear Regression Model Equation
 
@@ -185,32 +185,9 @@ Under **optimal conditions** (all other factors optimal):
 sleep-fatigue-analysis/
 ├── Project.ipynb          # Main analysis notebook
 ├── bedtime_screentime_sleep_debt.csv  # Dataset
-├── README.md                # This file
+├── README.md                
 ├── requirements.txt         # Dependencies
-├── LICENSE                  # MIT Licence
-├── data/
-│   └── bedtime_screentime_sleep_debt.csv
-├── notebooks/
-│   └── analysis.ipynb
-├── src/
-│   ├── preprocessing.py
-│   ├── model.py
-│   └── visualisation.py
-└── outputs/
-    └── actvpred.png
 ```
-
----
-
-## Future Work
-
-- [ ] **Investigate physical activity coefficient** (positive association with fatigue)
-- [ ] **Add cross-validation** (k-fold CV for robust performance estimates)
-- [ ] **Add regularisation** (Ridge/Lasso for feature selection)
-- [ ] **Interaction terms** (e.g., `screen_time × blue_light_filter`)
-- [ ] **Hyperparameter tuning** for Random Forest (n_estimators, max_depth, etc.)
-- [ ] **SHAP values** for model interpretability
-- [ ] **Time-series analysis** if longitudinal data available
 
 ---
 

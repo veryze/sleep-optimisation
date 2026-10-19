@@ -115,23 +115,23 @@ Other features such as demographics (age/careers of participants) were included 
 
 | Feature | Importance | Rank |
 |---------|------------|------|
-| `total_sleep_hours` | 0.452 | 1 |
-| `morning_alarm_snoozes` | 0.210 | 2 |
-| `sleep_latency_min` | 0.113 | 3 |
-| `bedtime_phone_minutes` | 0.052 | 4 |
-| `deep_sleep_pct` | 0.051 | 5 |
-| `caffeine_post_5pm_mg` | 0.038 | 6 |
-| `screen_brightness_pct` | 0.032 | 7 |
-| `rem_sleep_pct` | 0.021 | 8 |
-| `blue_light_filter_active` | 0.008 | 9 |
-| `physical_activity_min` | 0.004 | 10 |
+| `morning_alarm_snoozes` | 0.481 | 1 |
+| `total_sleep_hours` | 0.388 | 2 |
+| `sleep_latency_min` | 0.082 | 3 |
+| `deep_sleep_pct` | 0.015 | 4 |
+| `caffeine_post_5pm_mg` | 0.010 | 5 |
+| `screen_brightness_pct` | 0.007 | 6 |
+| `bedtime_phone_minutes` | 0.006 | 7 |
+| `rem_sleep_pct` | 0.005 | 8 |
+| `physical_activity_min` | 0.005 | 9 |
+| `blue_light_filter_active` | 0.001 | 10 |
 
 *Both models agree: **total_sleep_hours** is the most important predictor, followed by **morning_alarm_snoozes** and **sleep_latency_min**.*
 
 ### Linear Regression Model Equation
 
 ```
-fatigue = 3.805
+fatigue = 3.805 (intercept)
         + 0.206 × bedtime_phone_min
         + 0.107 × screen_brightness
         − 0.072 × blue_light_filter
@@ -153,13 +153,13 @@ fatigue = 3.805
 
 | Priority | Action | Expected Fatigue Reduction |
 |----------|--------|---------------------------|
-| 1 | **Increase total sleep hours** | ⬇ **High** (−1.39 per hour) |
-| 2 | **Reduce snoozing** | ⬇ **High** (−0.64 per snooze) |
-| 3 | **Reduce sleep latency** | ⬇ **Medium** (−0.54 per minute) |
-| 4 | **Increase deep sleep percentage** | ⬇ **Medium** |
-| 5 | **Reduce bedtime phone use** | ⬇ **Low–Medium** |
-| 6 | **Avoid evening caffeine** | ⬇ **Low–Medium** |
-| 7 | **Enable blue light filter** | ⬇ **Low** |
+| 1 | **Increase total sleep hours** | **High** (−1.39 per hour) |
+| 2 | **Reduce snoozing** | **High** (−0.64 per snooze) |
+| 3 | **Reduce sleep latency** | **Medium** (−0.54 per minute) |
+| 4 | **Increase deep sleep percentage** | **Medium** |
+| 5 | **Reduce bedtime phone use** | **Low–Medium** |
+| 6 | **Avoid evening caffeine** | **Low–Medium** |
+| 7 | **Enable blue light filter** | **Low** |
 
 ### Counter-Intuitive Findings
 
@@ -185,10 +185,19 @@ Under **optimal conditions** (all other factors optimal):
 sleep-fatigue-analysis/
 ├── Project.ipynb          # Main analysis notebook
 ├── bedtime_screentime_sleep_debt.csv  # Dataset
-├── README.md
+├── README.md                # This file
 ├── requirements.txt         # Dependencies
+├── LICENSE                  # MIT Licence
 ├── data/
 │   └── bedtime_screentime_sleep_debt.csv
+├── notebooks/
+│   └── analysis.ipynb
+├── src/
+│   ├── preprocessing.py
+│   ├── model.py
+│   └── visualisation.py
+└── outputs/
+    └── actvpred.png
 ```
 
 ---

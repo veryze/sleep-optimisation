@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.venv
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data files (uncomment if you want to exclude data from git)
+# data/*.csv
+# *.csv
+
+# Output files
+*.png
+*.jpg
+*.pdf
+outputs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks (uncomment if you want to exclude notebooks from git)
+# *.ipynb

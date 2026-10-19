@@ -146,6 +146,20 @@ fatigue = 3.805 (intercept)
 
 ---
 
+### kFold Five-fold Cross Validation
+
+| Fold | MSE | R2 Score |
+|---------|------------|------|
+| 1 | 0.352793 | 0.951030 |
+| 2 | 0.363634 | 0.952443 |
+| 3 | 0.346484 | 0.951567 |
+| 4 | 0.407203 | 0.941751 |
+| 5 | 0.378294 | 0.946110 |
+
+**Mean CV MSE**: 0.3697 (+/- 0.0216)
+**Mean CV R2 Score**: 0.9486 (+/- 0.0041)
+
+---
 
 ## Key Insights and Recommendations
 
@@ -176,6 +190,12 @@ Under **optimal conditions** (all other factors optimal):
 - To achieve **Fatigue Score 3.0**: Need **3.63 hours** sleep
 - To achieve **Fatigue Score 4.0**: Need **3.20 hours** sleep
 - **Beyond 4 hours**: Diminishing returns (plateau at ~3.2 hours minimum)
+
+---
+
+### Results
+
+Ultimately, my hypothesis was partially right - reducing screentime, screen brightness, caffeine intake, and increasing sleep hours did help minimise fatigue. However, contrary to my assumption, exercise before sleeping had a positive correlation with fatigue reduction, and snoozing in the morning had a negative correlation, although these correlations were relatively weak. 
 
 ---
 
